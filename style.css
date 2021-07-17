@@ -1,3 +1,14 @@
+body {
+  width: 375px;
+  margin: 0 auto;
+  background: #C5E4E7;
+}
 
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0 40.86px 0;
+}
 
 /*# sourceMappingURL=style.css.map */

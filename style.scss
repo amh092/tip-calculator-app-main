@@ -30,10 +30,30 @@ text-align: left;
 }
 
 body {
-    width: 375;
+    width: 375px;
     margin: 0 auto;
+    background: #C5E4E7;
 }
 
-svg {
+.logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50px 0 40.86px 0;
+}
+
+.bill-container {
+  
+}
+
+.bill{
+
+}
+
+.bill h1 {
+    
+}
+
+.bill input {
 
 }
