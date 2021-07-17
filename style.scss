@@ -17,6 +17,7 @@ line-height: 24px;
 letter-spacing: 0px;
 text-align: left;
 }
+
 @mixin font-mobile-sub-title {
 font-family: Space Mono;
 font-size: 13px;
@@ -25,5 +26,14 @@ font-weight: 700;
 line-height: 19px;
 letter-spacing: 0px;
 text-align: left;
+
+}
+
+body {
+    width: 375;
+    margin: 0 auto;
+}
+
+svg {
 
 }
