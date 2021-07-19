@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 @mixin font-mobile-numbers {
 font-family: Space Mono;
 font-size: 24px;
@@ -29,10 +30,38 @@ text-align: left;
 
 }
 
+*,*::before,*::after  {
+    
+    box-sizing: border-box;
+}
+
+h1,li,p,a {
+    padding: 0;
+    margin: 0;
+    
+}
+:root {
+
+    --Strong-Cyan: hsl(172, 67%, 45%);
+    --Very-Darkcyan: hsl(183, 100%, 15%);
+    --Dark-Grayish : hsl(186, 14%, 43%);
+    --Dark-Grayish2 : hsl(184, 14%, 56%);
+    --Light-Grayish : hsl(185, 41%, 84%);
+    --Light-Grayish2 : hsl(189, 41%, 97%);
+    --White : hsl(0, 0%, 100%); 
+    --background-color: #C5E4E7;
+}
+.wrapper {
+    background: var(--White);
+    border-radius: 25px 25px 0px 0px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
 body {
     width: 375px;
     margin: 0 auto;
-    background: #C5E4E7;
+    background: var(--Light-Grayish)
 }
 
 .logo {
@@ -42,18 +71,148 @@ body {
     margin: 50px 0 40.86px 0;
 }
 
-.bill-container {
+.bill {
+    position: relative;
+}
+.bill h1 {
+    @include font-mobile-titles();
+    margin: 0 0 6px 0;
+    padding: 0;
+    color: var(--Dark-Grayish);
+    font-weight: normal;
+}
+
+.bill svg{
+    position: absolute;
+    top: 46px;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+}
+.bill input {
+    text-align: right;
+    @include font-mobile-numbers();
+    color: var(--Very-Darkcyan);
+    background: var(--Light-Grayish2);
+    outline: none;
+    border: none;
+    width: 311px;
+    height: 48px;
+    padding: 6px 16px ;
+    border-radius: 5px;
+}
+
+.select-tip {
+    height: 216px;
+    width: 311px;
+    margin-top: 32px;
+}
+
+.select-tip > h1 {
+    @include font-mobile-titles();
+    font-weight: normal;
+    color: var(--Dark-Grayish2);
+}
+
+.tip-percent {
+    height: 176px;
+    width: 311px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+   
+}
+
+.percent 
+,.custom {
+
+width :146.63px;
+height:48px;
+text-align : center;
+background: var(--Very-Darkcyan);
+
+color: var(--White);
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.percent h1  {
+    @include font-mobile-numbers();
+}
+
+.custom 
+ {
+     background: var(--Light-Grayish2);
+     color: var(--Dark-Grayish2);
+
+ }
+ 
+ .custom input {
+     @include font-mobile-numbers();
+    text-align: center;
+    margin: 6px 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--Light-Grayish2);
+    color: var(--Very-Darkcyan);
+}
+
+.percent:hover {
+    background: var(--Strong-Cyan);
+    color: var(--Very-Darkcyan);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.number-of-people {
+    width: 311px;
+    height: 78px;
+    margin-top: 16px;
+}
+
+.number {
+    position: relative;
+}
+.number-text {
+
+}
+
+.number svg {
+    position: absolute;
+    top: 16px;
+    left: 17px;
   
 }
-
-.bill{
-
+.number-text h1  {
+@include font-mobile-titles();
+font-weight: normal;
+color: var(--Dark-Grayish);
+font-size: 16px;
+margin-bottom: 6px;
 }
 
-.bill h1 {
+.number input {
+    width: 311px;
+    height: 48px;
+    outline: none;
+    border: none;
+    background: var(--Light-Grayish2);
+    text-align: right;
+    @include font-mobile-numbers();
+    color: var(--Very-Darkcyan);
+    padding: 6px 16px;
+    border-radius: 5px;
+}
+
+.number input::placeholder {
+    text-align: right;
     
-}
-
-.bill input {
-
+    @include font-mobile-numbers();
+    color: var(--Dark-Grayish);
 }
