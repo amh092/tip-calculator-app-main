@@ -174,13 +174,21 @@ body {
   position: relative;
 }
 
+.number-text {
+  width: 311px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .number svg {
   position: absolute;
   top: 16px;
   left: 17px;
 }
 
-.number-text h1 {
+.number-text h1:first-of-type {
   font-family: Space Mono;
   font-size: 16px;
   font-style: normal;
@@ -192,6 +200,17 @@ body {
   color: var(--Dark-Grayish);
   font-size: 16px;
   margin-bottom: 6px;
+}
+
+.number-text h1:last-of-type {
+  font-family: Space Mono;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: red;
 }
 
 .number input {
@@ -222,7 +241,45 @@ body {
   line-height: 36px;
   letter-spacing: 0px;
   text-align: right;
-  color: var(--Dark-Grayish);
+  color: var(--Very-Darkcyan);
+}
+
+.display {
+  width: 327px;
+  height: 257px;
+  margin-top: 69px;
+  background: var(--Very-Darkcyan);
+  border-radius: 5px;
+}
+
+.tip-amount {
+  width: 281px;
+  height: 48px;
+}
+
+.tip-amount .title-tip {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.tip-amount .title-tip h1:first-of-type {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.tip-amount .title-tip h1:last-of-type {
+  font-family: Space Mono;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

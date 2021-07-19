@@ -180,7 +180,11 @@ align-items: center;
     position: relative;
 }
 .number-text {
-
+width: 311px ;
+display: flex;
+flex-flow: row wrap;
+align-items: baseline;
+justify-content: space-between;
 }
 
 .number svg {
@@ -189,12 +193,17 @@ align-items: center;
     left: 17px;
   
 }
-.number-text h1  {
+.number-text h1:first-of-type  {
 @include font-mobile-titles();
 font-weight: normal;
 color: var(--Dark-Grayish);
 font-size: 16px;
 margin-bottom: 6px;
+}
+
+.number-text h1:last-of-type {
+    @include font-mobile-sub-title();
+    color: red;
 }
 
 .number input {
@@ -214,5 +223,33 @@ margin-bottom: 6px;
     text-align: right;
     
     @include font-mobile-numbers();
-    color: var(--Dark-Grayish);
+    color: var(--Very-Darkcyan);
+}
+
+.display {
+    width: 327px;
+height: 257px;
+margin-top: 69px;
+background: var(--Very-Darkcyan);
+border-radius: 5px;
+}
+
+.tip-amount {
+    width: 281px;
+    height: 48px;
+   
+}
+
+.tip-amount .title-tip {
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+.tip-amount .title-tip h1:first-of-type {
+    @include font-mobile-titles();
+}
+
+.tip-amount .title-tip h1:last-of-type {
+    @include font-mobile-sub-title();
 }
