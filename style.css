@@ -125,7 +125,7 @@ body {
   align-items: center;
 }
 
-.percent h1 {
+.tip-percent > h1 {
   font-family: Space Mono;
   font-size: 24px;
   font-style: normal;
@@ -378,6 +378,10 @@ body {
 .reset:hover {
   background-color: var(--Light-Grayish);
   cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

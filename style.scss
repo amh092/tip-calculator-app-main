@@ -140,7 +140,7 @@ justify-content: center;
 align-items: center;
 
 }
-.percent h1  {
+.tip-percent > h1  {
     @include font-mobile-numbers();
 }
 
@@ -251,10 +251,6 @@ border-radius: 5px;
 .tip-amount .title-tip {
     display: flex;
     flex-flow: column wrap;
-   
-  
-    
-
 }
 
 .tip-amount .title-tip h1:first-of-type {
@@ -326,4 +322,8 @@ border-radius: 5px;
 .reset:hover {
     background-color: var(--Light-Grayish);
     cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
 }
