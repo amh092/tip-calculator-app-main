@@ -24,7 +24,6 @@ for (i = 0; i < btns2.length; i = i + 1) {
                 totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
                 totalForPerson.innerText = Math.round(totalCalc);
 
-
-
+            }
             })
     }
