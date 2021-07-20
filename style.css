@@ -245,16 +245,21 @@ body {
 }
 
 .display {
-  width: 327px;
+  width: 311px;
   height: 257px;
-  margin-top: 69px;
+  margin-top: 32px;
   background: var(--Very-Darkcyan);
   border-radius: 5px;
 }
 
 .tip-amount {
-  width: 281px;
+  width: 311px;
   height: 48px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 32px 22px;
+  margin-top: 32px;
 }
 
 .tip-amount .title-tip {
@@ -270,6 +275,7 @@ body {
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
+  color: var(--White);
 }
 
 .tip-amount .title-tip h1:last-of-type {
@@ -280,6 +286,98 @@ body {
   line-height: 19px;
   letter-spacing: 0px;
   text-align: left;
+  color: var(--Dark-Grayish2);
+}
+
+.tip-amount .tip-amount-number {
+  padding: 0;
+  margin: 0;
+}
+
+.tip-amount .tip-amount-number h1 {
+  color: var(--Strong-Cyan);
+  font-family: Space Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.total {
+  width: 311px;
+  height: 48px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 32px 22px;
+  margin: px 0 0 0;
+}
+
+.total .total-title {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.total-title h1:first-of-type {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--White);
+}
+
+.total-title h1:last-of-type {
+  font-family: Space Mono;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--Dark-Grayish2);
+}
+
+.tip-amount-number-total h1 {
+  color: var(--Strong-Cyan);
+  font-family: Space Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.reset {
+  width: 281px;
+  height: 48px;
+  background: var(--Strong-Cyan);
+  margin: 64px 16px;
+  border-radius: 5px;
+}
+
+.reset h1 {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-align: center;
+  padding: 11px 0;
+  font-size: 20px;
+  color: #00474B;
+}
+
+.reset:hover {
+  background-color: var(--Light-Grayish);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
