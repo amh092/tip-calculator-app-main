@@ -7,6 +7,7 @@ var totalForPerson = document.getElementById("tip-amount-total");
 var cantBeZero = document.querySelector(".number-text h1:last-of-type");
 var tipCalc;
 var totalCalc;
+var custom = document.getElementById("custom");
 
 for (i = 0; i < btns.length; i = i + 1) {
     btns2.push(btns[i])
@@ -27,3 +28,9 @@ for (i = 0; i < btns2.length; i = i + 1) {
             }
             })
     }
+
+custom.addEventListener("blur", function(){
+
+    
+
+})
