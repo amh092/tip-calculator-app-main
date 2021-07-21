@@ -126,7 +126,7 @@ body {
 }
 
 .percent 
-,.custom {
+,.tip-percent input{
 
 width :146.63px;
 height:48px;
@@ -151,15 +151,17 @@ align-items: center;
 
  }
  
- .custom input {
+ .tip-percent input {
      @include font-mobile-numbers();
     text-align: center;
-    margin: 6px 0;
-    width: 100%;
+  
     border: none;
     outline: none;
     background: var(--Light-Grayish2);
     color: var(--Very-Darkcyan);
+   
+/* identical to box height */
+
 }
 
 .percent:hover {
@@ -326,4 +328,10 @@ border-radius: 5px;
 
 .hidden {
     visibility: hidden;
+}
+.current-percent {
+    background: var(--Strong-Cyan);
+    color: var(--Very-Darkcyan);
+    font-weight: bold;
+    cursor: pointer;
 }

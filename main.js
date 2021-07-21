@@ -30,6 +30,9 @@ function calc(tipPercent) {
 custom.addEventListener("input", function () {
     calc(custom.value)
     tipPercent = custom.value
+    btns2.forEach(h1 => {
+        h1.classList.remove("current-percent")
+    });
     
 })
 
@@ -38,6 +41,11 @@ for (i = 0; i < btns2.length; i = i + 1) {
     btns2[i].addEventListener("click", function (e) {
         calc(e.target.innerText)
         tipPercent = e.target.innerText
+       
+        btns2.forEach(h1 => {
+            h1.classList.remove("current-percent")
+        });
+        e.target.classList.add("current-percent");
     }
     )
    

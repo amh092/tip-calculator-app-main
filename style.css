@@ -113,7 +113,7 @@ body {
 }
 
 .percent,
-.custom {
+.tip-percent input {
   width: 146.63px;
   height: 48px;
   text-align: center;
@@ -140,7 +140,7 @@ body {
   color: var(--Dark-Grayish2);
 }
 
-.custom input {
+.tip-percent input {
   font-family: Space Mono;
   font-size: 24px;
   font-style: normal;
@@ -149,12 +149,11 @@ body {
   letter-spacing: 0px;
   text-align: right;
   text-align: center;
-  margin: 6px 0;
-  width: 100%;
   border: none;
   outline: none;
   background: var(--Light-Grayish2);
   color: var(--Very-Darkcyan);
+  /* identical to box height */
 }
 
 .percent:hover {
@@ -382,6 +381,13 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+.current-percent {
+  background: var(--Strong-Cyan);
+  color: var(--Very-Darkcyan);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
