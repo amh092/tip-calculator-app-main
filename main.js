@@ -17,20 +17,14 @@ for (i = 0; i < btns.length; i = i + 1) {
 
 function calc(tipPercent) {
     
-    if (numberOfPeople.value == 0) {
-        cantBeZero.classList.remove("hidden")
-    } else if (numberOfPeople.value > 0 && billAmount.value > 0) {
+        if (numberOfPeople.value > 0 && billAmount.value > 0) {
         cantBeZero.classList.add("hidden")
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(2)
+        tipAmount.innerText = tipCalc.toFixed(3)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText = totalCalc.toFixed(2)
+        totalForPerson.innerText = totalCalc.toFixed(3)
     }
-    if (totalCalc == NaN) {
-
-        totalCalc.innerText = "ERROR"
-        
-    }
+  
 }
 
 custom.addEventListener("input", function () {
@@ -50,14 +44,12 @@ for (i = 0; i < btns2.length; i = i + 1) {
 }
 
 billAmount.addEventListener("input",function (){
-    if (numberOfPeople.value == 0) {
-        cantBeZero.classList.remove("hidden")
-    } else if (numberOfPeople.value > 0 && billAmount.value > 0) {
+   if (numberOfPeople.value > 0 && billAmount.value > 0) {
         cantBeZero.classList.add("hidden")
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(2)
+        tipAmount.innerText = tipCalc.toFixed(3)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText = totalCalc.toFixed(2)
+        totalForPerson.innerText = totalCalc.toFixed(3)
     }   
 })
 
@@ -67,9 +59,9 @@ numberOfPeople.addEventListener("input",function(){
     } else if (numberOfPeople.value > 0 && billAmount.value > 0) {
         cantBeZero.classList.add("hidden")
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(2)
+        tipAmount.innerText = tipCalc.toFixed(3)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText =  totalCalc.toFixed(2);
+        totalForPerson.innerText =  totalCalc.toFixed(3)
     }}
 )
 
@@ -81,5 +73,6 @@ reset.addEventListener("click", function () {
     custom.value = "";
     totalForPerson.innerText = "$0:00";
     tipAmount.innerText = "$0:00"
+    cantBeZero.classList.add("hidden")
 })
 
