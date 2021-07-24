@@ -392,6 +392,11 @@ body {
 .outline-active {
   border: 1px red solid;
   outline: none;
+  border-radius: 5px;
+}
+
+.outline-active:focus {
+  outline: none;
 }
 
 .outline-disable {
@@ -439,6 +444,11 @@ body {
   .bill input {
     width: 379px;
     height: 48px;
+  }
+
+  input:focus,
+.custom:focus {
+    outline: var(--Strong-Cyan) 1px solid;
   }
 
   .select-tip {
@@ -496,12 +506,42 @@ body {
     justify-content: space-around;
     align-content: center;
     margin: 32px 32px 32px 0;
-    padding: 0 40px;
+    padding: 0 10px;
   }
 
   .tip-amount {
     margin: 0px 0 0 0;
     width: 100%;
+  }
+
+  .title-tip h1:first-of-type,
+.total-title h1:first-of-type {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title-tip h1:last-of-type,
+.total-title h1:last-of-type {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .tip-amount-number-total h1,
+#tip-amount {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 71px;
+    /* identical to box height */
+    text-align: right;
+    letter-spacing: -1px;
   }
 
   .total {

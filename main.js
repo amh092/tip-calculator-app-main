@@ -19,9 +19,9 @@ function calc(tipPercent) {
     
         if (numberOfPeople.value > 0 && billAmount.value > 0) {
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(3)
+        tipAmount.innerText = tipCalc.toFixed(2)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText = totalCalc.toFixed(3)
+        totalForPerson.innerText = totalCalc.toFixed(2)
     }
   
 }
@@ -54,9 +54,9 @@ billAmount.addEventListener("input",function (){
    if (numberOfPeople.value > 0 && billAmount.value > 0) {
         cantBeZero.classList.add("hidden")
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(3)
+        tipAmount.innerText = tipCalc.toFixed(2)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText = totalCalc.toFixed(3)
+        totalForPerson.innerText = totalCalc.toFixed(2)
     }   
 })
 
@@ -70,9 +70,9 @@ numberOfPeople.addEventListener("input",function(){
         numberOfPeople.classList.remove("outline-active")
         numberOfPeople.classList.add("outline-disable")
         tipCalc = parseInt(billAmount.value) * (parseInt(tipPercent) / 100) / parseInt(numberOfPeople.value);
-        tipAmount.innerText = tipCalc.toFixed(3)
+        tipAmount.innerText = tipCalc.toFixed(2)
         totalCalc = (parseInt(billAmount.value) / parseInt(numberOfPeople.value)) + tipCalc;
-        totalForPerson.innerText =  totalCalc.toFixed(3)
+        totalForPerson.innerText =  totalCalc.toFixed(2)
     }}
 )
 
