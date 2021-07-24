@@ -1,337 +1,466 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 @mixin font-mobile-numbers {
-font-family: Space Mono;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 36px;
-letter-spacing: 0px;
-text-align: right;
+  font-family: Space Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: right;
 }
 
 @mixin font-mobile-titles {
-font-family: Space Mono;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px;
-letter-spacing: 0px;
-text-align: left;
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 @mixin font-mobile-sub-title {
-font-family: Space Mono;
-font-size: 13px;
-font-style: normal;
-font-weight: 700;
-line-height: 19px;
-letter-spacing: 0px;
-text-align: left;
-
+  font-family: Space Mono;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
-*,*::before,*::after  {
-    
-    box-sizing: border-box;
+@mixin font-desktop-titles {
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-h1,li,p,a {
-    padding: 0;
-    margin: 0;
-    
+@mixin font-desktop-sub-titles {
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+@mixin font-desktop-numbers {
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+li,
+p,
+a {
+  padding: 0;
+  margin: 0;
 }
 :root {
-
-    --Strong-Cyan: hsl(172, 67%, 45%);
-    --Very-Darkcyan: hsl(183, 100%, 15%);
-    --Dark-Grayish : hsl(186, 14%, 43%);
-    --Dark-Grayish2 : hsl(184, 14%, 56%);
-    --Light-Grayish : hsl(185, 41%, 84%);
-    --Light-Grayish2 : hsl(189, 41%, 97%);
-    --White : hsl(0, 0%, 100%); 
-    --background-color: #C5E4E7;
+  --Strong-Cyan: hsl(172, 67%, 45%);
+  --Very-Darkcyan: hsl(183, 100%, 15%);
+  --Dark-Grayish: hsl(186, 14%, 43%);
+  --Dark-Grayish2: hsl(184, 14%, 56%);
+  --Light-Grayish: hsl(185, 41%, 84%);
+  --Light-Grayish2: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --background-color: #c5e4e7;
 }
 .wrapper {
-    background: var(--White);
-    border-radius: 25px 25px 0px 0px;
-    margin: 0 auto;
-    padding: 32px;
+  background: var(--White);
+  border-radius: 25px 25px 0px 0px;
+  margin: 0 auto;
+  padding: 32px;
 }
 
 body {
-    width: 375px;
-    margin: 0 auto;
-    background: var(--Light-Grayish)
+  width: 375px;
+  margin: 0 auto;
+  background: var(--Light-Grayish);
 }
 
 .logo {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin: 50px 0 40.86px 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0 40.86px 0;
 }
 
 .bill {
-    position: relative;
+  position: relative;
 }
 .bill h1 {
-    @include font-mobile-titles();
-    margin: 0 0 6px 0;
-    padding: 0;
-    color: var(--Dark-Grayish);
-    font-weight: normal;
+  @include font-mobile-titles();
+  margin: 0 0 6px 0;
+  padding: 0;
+  color: var(--Dark-Grayish);
+  font-weight: normal;
 }
 
-.bill svg{
-    position: absolute;
-    top: 46px;
-    left: 10px;
-    padding: 0;
-    margin: 0;
+.bill svg {
+  position: absolute;
+  top: 46px;
+  left: 10px;
+  padding: 0;
+  margin: 0;
 }
 .bill input {
-    text-align: right;
-    @include font-mobile-numbers();
-    color: var(--Very-Darkcyan);
-    background: var(--Light-Grayish2);
-    outline: none;
-    border: none;
-    width: 311px;
-    height: 48px;
-    padding: 6px 16px ;
-    border-radius: 5px;
+  text-align: right;
+  @include font-mobile-numbers();
+  color: var(--Very-Darkcyan);
+  background: var(--Light-Grayish2);
+  outline: none;
+  border: none;
+  width: 311px;
+  height: 48px;
+  padding: 6px 16px;
+  border-radius: 5px;
 }
 
 .select-tip {
-    height: 216px;
-    width: 311px;
-    margin-top: 32px;
+  height: 216px;
+  width: 311px;
+  margin-top: 32px;
 }
 
-.select-tip > h1 {
-    @include font-mobile-titles();
-    font-weight: normal;
-    color: var(--Dark-Grayish2);
+.select-tip .select-tip-title{
+  @include font-mobile-titles();
+  font-weight: normal;
+  color: var(--Dark-Grayish2);
 }
 
 .tip-percent {
-    height: 176px;
-    width: 311px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 16px;
-   
+  height: 176px;
+  width: 311px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
 }
 
-.percent 
-,.tip-percent input{
+.percent,
+.tip-percent .custom {
+  width: 146.63px;
+  height: 48px;
+  text-align: center;
+  background: var(--Very-Darkcyan);
 
-width :146.63px;
-height:48px;
-text-align : center;
-background: var(--Very-Darkcyan);
-
-color: var(--White);
-border-radius: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-
+  color: var(--White);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.tip-percent > h1  {
-    @include font-mobile-numbers();
+.tip-percent .percent,
+.custom {
+  @include font-mobile-numbers();
 }
 
-.custom 
- {
-     background: var(--Light-Grayish2);
-     color: var(--Dark-Grayish2);
+.tip-percent .custom {
+  @include font-mobile-numbers();
+  text-align: center;
 
- }
- 
- .tip-percent input {
-     @include font-mobile-numbers();
-    text-align: center;
-  
-    border: none;
-    outline: none;
-    background: var(--Light-Grayish2);
-    color: var(--Very-Darkcyan);
-   
-/* identical to box height */
+  border: none;
+  outline: none;
+  background: var(--Light-Grayish2);
+  color: var(--Very-Darkcyan);
 
+  /* identical to box height */
 }
 
 .percent:hover {
-    background: var(--Strong-Cyan);
-    color: var(--Very-Darkcyan);
-    font-weight: bold;
-    cursor: pointer;
+  background: var(--Strong-Cyan);
+  color: var(--Very-Darkcyan);
+  font-weight: bold;
+  cursor: pointer;
 }
 
-
 .number-of-people {
-    width: 311px;
-    height: 78px;
-    margin-top: 16px;
+  width: 311px;
+  height: 78px;
+  margin-top: 16px;
 }
 
 .number {
-    position: relative;
+  position: relative;
 }
 .number-text {
-width: 311px ;
-display: flex;
-flex-flow: row wrap;
-align-items: baseline;
-justify-content: space-between;
+  width: 311px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .number svg {
-    position: absolute;
-    top: 16px;
-    left: 17px;
-  
+  position: absolute;
+  top: 16px;
+  left: 17px;
 }
-.number-text h1:first-of-type  {
-@include font-mobile-titles();
-font-weight: normal;
-color: var(--Dark-Grayish);
-font-size: 16px;
-margin-bottom: 6px;
+.number-text h1:first-of-type {
+  @include font-mobile-titles();
+  font-weight: normal;
+  color: var(--Dark-Grayish);
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 .number-text h1:last-of-type {
-    @include font-mobile-sub-title();
-    color: red;
+  @include font-mobile-sub-title();
+  color: red;
 }
 
-.number input {
-    width: 311px;
-    height: 48px;
-    outline: none;
-    border: none;
-    background: var(--Light-Grayish2);
-    text-align: right;
-    @include font-mobile-numbers();
-    color: var(--Very-Darkcyan);
-    padding: 6px 16px;
-    border-radius: 5px;
+.number .number-of-people-input {
+  width: 311px;
+  height: 48px;
+  background: var(--Light-Grayish2);
+  text-align: right;
+  @include font-mobile-numbers();
+  color: var(--Very-Darkcyan);
+  padding: 6px 16px;
+  border-radius: 5px;
 }
 
-.number input::placeholder {
-    text-align: right;
-    
-    @include font-mobile-numbers();
-    color: var(--Very-Darkcyan);
+.number .number-of-people-input::placeholder {
+  text-align: right;
+
+  @include font-mobile-numbers();
+  color: var(--Very-Darkcyan);
 }
 
 .display {
-width: 311px;
-height: 257px;
-margin-top: 32px;
-background: var(--Very-Darkcyan);
-border-radius: 5px;
-
+  width: 311px;
+  height: 257px;
+  margin-top: 32px;
+  background: var(--Very-Darkcyan);
+  border-radius: 5px;
 }
 
 .tip-amount {
-    width: 311px;
-    height: 48px;
-    display: flex;
-    flex-flow: row wrap;
-   justify-content: space-between;
-   padding: 32px 22px;
-   margin-top: 32px;
-  
- 
-   
+  width: 311px;
+  height: 48px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 32px 22px;
+  margin-top: 32px;
 }
 
 .tip-amount .title-tip {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .tip-amount .title-tip h1:first-of-type {
-    @include font-mobile-titles();
-    color: var(--White);
+  @include font-mobile-titles();
+  color: var(--White);
 }
 
 .tip-amount .title-tip h1:last-of-type {
-    @include font-mobile-sub-title();
-    color: var(--Dark-Grayish2);
+  @include font-mobile-sub-title();
+  color: var(--Dark-Grayish2);
 }
 
 .tip-amount .tip-amount-number {
-    padding: 0;
-    margin: 0;   
+  padding: 0;
+  margin: 0;
 }
 
 .tip-amount .tip-amount-number h1 {
-    color: var(--Strong-Cyan);
-    @include font-mobile-numbers();
+  color: var(--Strong-Cyan);
+  @include font-mobile-numbers();
 }
 
 .total {
-    width: 311px;
-    height: 48px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 32px 22px;
-    margin: px 0 0 0;
+  width: 311px;
+  height: 48px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 32px 22px;
+  margin: 0px 0 0 0;
 }
 
 .total .total-title {
-    display: flex;
-    flex-flow: column wrap;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .total-title h1:first-of-type {
-    @include font-mobile-titles();
-    color: var(--White);
+  @include font-mobile-titles();
+  color: var(--White);
 }
 .total-title h1:last-of-type {
-    @include font-mobile-sub-title();
-    color: var(--Dark-Grayish2);
+  @include font-mobile-sub-title();
+  color: var(--Dark-Grayish2);
 }
 
 .tip-amount-number-total h1 {
-    color: var(--Strong-Cyan);
-    @include font-mobile-numbers();
+  color: var(--Strong-Cyan);
+  @include font-mobile-numbers();
 }
 
 .reset {
-    width: 281px;
-    height: 48px;
-    background: var(--Strong-Cyan);
-    margin: 64px 16px;
-    border-radius: 5px;
+  width: 281px;
+  height: 48px;
+  background: var(--Strong-Cyan);
+  margin: 64px 16px;
+  border-radius: 5px;
 }
 
 .reset h1 {
-    @include font-mobile-titles();
-    text-align: center;
-    padding: 11px 0;
-    font-size: 20px;
-    color: #00474B;
-
+  @include font-mobile-titles();
+  text-align: center;
+  padding: 11px 0;
+  font-size: 20px;
+  color: #00474b;
 }
 
 .reset:hover {
-    background-color: var(--Light-Grayish);
-    cursor: pointer;
+  background-color: var(--Light-Grayish);
+  cursor: pointer;
 }
 
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 .current-percent {
-    background: var(--Strong-Cyan);
-    color: var(--Very-Darkcyan);
-    font-weight: bold;
-    cursor: pointer;
+  background: var(--Strong-Cyan);
+  color: var(--Very-Darkcyan);
+  font-weight: bold;
+  cursor: pointer;
 }
+.outline-active {
+    border: 1px red solid;
+    outline: none;
+}
+.outline-disable {
+    border: none;
+    outline: none;
+}
+
+// desktop  media query
+
+@media only screen and (min-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 1200px;
+    margin: 0 auto;
+    background: var(--Light-Grayish);
+  }
+  .wrapper {
+    width: 920px;
+    height: 481px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 25px;
+    padding: 0;
+  }
+  .bill-container {
+    width: 379px;
+    height: 388px;
+    margin: 48px;
+    padding: 0;
+  }
+  .bill {
+    width: 379px;
+    height: 78px;
+    margin: 20px 0 0 0;
+  }
+
+  .bill input {
+    width: 379px;
+    height: 48px;
+  }
+  .select-tip {
+    margin: 40px 0 0 0;
+    width: 379px;
+    height: 152px;
+  }
+
+ 
+  .tip-percent {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: space-around;
+      width: 379px;
+      height: 112px;
+    }  
+ 
+
+  .percent,
+  .tip-percent .custom {
+    width: 117px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+  }
+  .custom {
+      margin: 0 0 12px 0;
+      padding: 0;
+  }
+
+  .number-of-people {
+    width: 379px;
+    height: 78px;
+  }
+
+  .number-of-people .number .number-of-people-input {
+    width: 379px;
+    
+    
+  }
+  .number-text {
+    width: 379px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;}
+
+    .display {
+        width: 413px;
+        height: 417px;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        margin: 32px 32px 32px 0;
+        padding: 0 40px;
+        
+        
+      }
+    .tip-amount {
+        margin: 0px 0 0 0;
+        width: 100%;
+    }
+    .total {
+        width: 100%;
+        margin: -20px 0 0 0;
+    }
+    .reset {
+        width: 333px;
+        margin-bottom: 0px;
+      
+    }
+}
+

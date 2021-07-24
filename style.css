@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-h1, li, p, a {
+h1,
+li,
+p,
+a {
   padding: 0;
   margin: 0;
 }
@@ -16,7 +21,7 @@ h1, li, p, a {
   --Light-Grayish: hsl(185, 41%, 84%);
   --Light-Grayish2: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
-  --background-color: #C5E4E7;
+  --background-color: #c5e4e7;
 }
 
 .wrapper {
@@ -90,7 +95,7 @@ body {
   margin-top: 32px;
 }
 
-.select-tip > h1 {
+.select-tip .select-tip-title {
   font-family: Space Mono;
   font-size: 16px;
   font-style: normal;
@@ -113,7 +118,7 @@ body {
 }
 
 .percent,
-.tip-percent input {
+.tip-percent .custom {
   width: 146.63px;
   height: 48px;
   text-align: center;
@@ -125,7 +130,8 @@ body {
   align-items: center;
 }
 
-.tip-percent > h1 {
+.tip-percent .percent,
+.custom {
   font-family: Space Mono;
   font-size: 24px;
   font-style: normal;
@@ -135,12 +141,7 @@ body {
   text-align: right;
 }
 
-.custom {
-  background: var(--Light-Grayish2);
-  color: var(--Dark-Grayish2);
-}
-
-.tip-percent input {
+.tip-percent .custom {
   font-family: Space Mono;
   font-size: 24px;
   font-style: normal;
@@ -212,11 +213,9 @@ body {
   color: red;
 }
 
-.number input {
+.number .number-of-people-input {
   width: 311px;
   height: 48px;
-  outline: none;
-  border: none;
   background: var(--Light-Grayish2);
   text-align: right;
   font-family: Space Mono;
@@ -231,7 +230,7 @@ body {
   border-radius: 5px;
 }
 
-.number input::placeholder {
+.number .number-of-people-input::placeholder {
   text-align: right;
   font-family: Space Mono;
   font-size: 24px;
@@ -311,7 +310,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 32px 22px;
-  margin: px 0 0 0;
+  margin: 0px 0 0 0;
 }
 
 .total .total-title {
@@ -371,7 +370,7 @@ body {
   text-align: center;
   padding: 11px 0;
   font-size: 20px;
-  color: #00474B;
+  color: #00474b;
 }
 
 .reset:hover {
@@ -388,6 +387,132 @@ body {
   color: var(--Very-Darkcyan);
   font-weight: bold;
   cursor: pointer;
+}
+
+.outline-active {
+  border: 1px red solid;
+  outline: none;
+}
+
+.outline-disable {
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 1200px;
+    margin: 0 auto;
+    background: var(--Light-Grayish);
+  }
+
+  .wrapper {
+    width: 920px;
+    height: 481px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 25px;
+    padding: 0;
+  }
+
+  .bill-container {
+    width: 379px;
+    height: 388px;
+    margin: 48px;
+    padding: 0;
+  }
+
+  .bill {
+    width: 379px;
+    height: 78px;
+    margin: 20px 0 0 0;
+  }
+
+  .bill input {
+    width: 379px;
+    height: 48px;
+  }
+
+  .select-tip {
+    margin: 40px 0 0 0;
+    width: 379px;
+    height: 152px;
+  }
+
+  .tip-percent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    width: 379px;
+    height: 112px;
+  }
+
+  .percent,
+.tip-percent .custom {
+    width: 117px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom {
+    margin: 0 0 12px 0;
+    padding: 0;
+  }
+
+  .number-of-people {
+    width: 379px;
+    height: 78px;
+  }
+
+  .number-of-people .number .number-of-people-input {
+    width: 379px;
+  }
+
+  .number-text {
+    width: 379px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .display {
+    width: 413px;
+    height: 417px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    margin: 32px 32px 32px 0;
+    padding: 0 40px;
+  }
+
+  .tip-amount {
+    margin: 0px 0 0 0;
+    width: 100%;
+  }
+
+  .total {
+    width: 100%;
+    margin: -20px 0 0 0;
+  }
+
+  .reset {
+    width: 333px;
+    margin-bottom: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
